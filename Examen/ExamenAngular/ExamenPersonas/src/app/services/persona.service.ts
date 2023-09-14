@@ -15,7 +15,7 @@ export class PersonaService {
 
   constructor(httpClient: HttpClient) {
     this.http = httpClient;
-    this.myAppUrl = 'https://localhost:7214/';
+    this.myAppUrl = 'https://localhost:7214/'; 
   }
 
   postPersona(personaPost: IPersonaForCreationDTO): Observable<string> {
