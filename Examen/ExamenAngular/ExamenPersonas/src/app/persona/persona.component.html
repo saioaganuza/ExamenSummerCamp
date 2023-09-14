@@ -1,0 +1,59 @@
+
+<div class="">
+    <div class="">
+        <h1 style="text-align: center; font-size: 25px;">Ingresar usuario</h1>
+        <div class="">
+            <form [formGroup]="login" (ngSubmit)="log()" class="">
+
+                <div class="">
+                    <label class="" for="nombre">
+                        Nombre
+                    </label>
+                    <input formControlName="nombre"
+                        class=""
+                        id="nombre" type="text" placeholder="Username">
+                    <p *ngIf="login.get('nombre')?.hasError('required') && login.get('nombre')?.touched"
+                        class="">Por favor escriba un nombre.</p>
+                </div>
+
+
+                <div class="">
+                    <label class="" for="fechaNacimiento">
+                        Fecha de Nacimiento
+                    </label>
+                    <input  formControlName="fechaNacimiento"
+                        class=""
+                        id="fechaNacimiento" type="datetime-local" placeholder="Username">
+                    <p *ngIf="login.get('fechaNacimiento')?.hasError('required') && login.get('fechaNacimiento')?.touched"
+                        class="">Por favor escriba un fecha de nacimiento válida.</p>
+                </div>
+
+
+                <div class="">
+                    <label class="" for="telefono">
+                        Teléfono
+                    </label>
+                    <input  formControlName="telefono"
+                        class=""
+                        id="telefono" type="text" placeholder="Username">
+                </div>
+
+
+                <div style="text-align: center;">
+                    <button [disabled]="login.invalid"
+                        ngClass=""
+                        class=""
+                        type="submit">
+                        Ingresar usuario
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<ul *ngFor="let persona of listaPersonas">
+    <li >{{ persona.nombre }}</li>
+    <li >-Edad: {{ persona.edad }}</li>
+    <li >-Telefono: {{ persona.telefono }}</li>
+
+</ul>
