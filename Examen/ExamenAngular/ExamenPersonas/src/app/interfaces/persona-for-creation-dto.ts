@@ -1,5 +1,5 @@
 export interface IPersonaForCreationDTO {
     nombre: string;
-    fechaDeNacimiento: Date;
+    fechaNacimiento: Date;
     telefono: string;
   }

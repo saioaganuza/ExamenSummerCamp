@@ -22,7 +22,7 @@ namespace Perisistence.Repositories
         {
             return await _context.Personas
                 .Where(persona => persona.FechaNacimiento < new DateTime(2002, 1, 1))
-                .Take(10).OrderBy(persona => persona.Nombre).ToListAsync();
+                .OrderBy(persona => persona.Nombre).Take(10).ToListAsync();
         }
 
         public async Task CrearPersona(Persona persona)

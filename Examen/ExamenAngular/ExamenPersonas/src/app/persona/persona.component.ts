@@ -29,7 +29,7 @@ export class PersonaComponent {
   log(): void {
     const persona: IPersonaForCreationDTO = {
       nombre: this.login.value.nombre,
-      fechaDeNacimiento: this.login.value.fechaNacimiento,
+      fechaNacimiento: this.login.value.fechaNacimiento,
       telefono: this.login.value.telefono
     };
     this.sub = this.personaService.postPersona(persona)
